@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.db.persistance;
+package simple.mind.mariadb02.db.persistance;
 
 import org.hibernate.boot.model.naming.Identifier;
 import org.hibernate.boot.model.naming.PhysicalNamingStrategy;

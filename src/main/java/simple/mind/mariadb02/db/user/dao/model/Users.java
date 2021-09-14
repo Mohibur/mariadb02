@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.db.user.dao.model;
+package simple.mind.mariadb02.db.user.dao.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

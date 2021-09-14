@@ -1,4 +1,4 @@
-package simple.mind.mariadb01;
+package simple.mind.mariadb02;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

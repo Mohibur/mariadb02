@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.web.controllers;
+package simple.mind.mariadb02.web.controllers;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import simple.mind.mariadb01.db.user.dao.model.UserInformation;
-import simple.mind.mariadb01.db.user.dao.model.Users;
-import simple.mind.mariadb01.db.user.dao.repositories.UserInformationRepository;
-import simple.mind.mariadb01.db.user.dao.repositories.UsersRepository;
+import simple.mind.mariadb02.db.user.dao.model.UserInformation;
+import simple.mind.mariadb02.db.user.dao.model.Users;
+import simple.mind.mariadb02.db.user.dao.repositories.UserInformationRepository;
+import simple.mind.mariadb02.db.user.dao.repositories.UsersRepository;
 
 @RestController
 public class UsersCtrl {

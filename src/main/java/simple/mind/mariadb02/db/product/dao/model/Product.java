@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.db.product.dao.model;
+package simple.mind.mariadb02.db.product.dao.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

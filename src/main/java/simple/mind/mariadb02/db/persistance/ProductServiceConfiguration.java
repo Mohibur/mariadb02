@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.db.persistance;
+package simple.mind.mariadb02.db.persistance;
 
 import javax.sql.DataSource;
 
@@ -16,20 +16,20 @@ import org.springframework.transaction.PlatformTransactionManager;
 @Configuration
 @PropertySource({ PersistenceCommonService.DB_PROPERY })
 @EnableJpaRepositories( //
-		basePackages = PersistenceCommonService.KEY_USER_BASE_PACKAGE, //
-		entityManagerFactoryRef = "userEntityManager", //
-		transactionManagerRef = "userTransactionManager" //
+		basePackages = PersistenceCommonService.KEY_PROD_BASE_PACKAGE, //
+		entityManagerFactoryRef = "productEntityManager", //
+		transactionManagerRef = "productTransactionManager" //
 )
-public class UserServiceConfiguration {
+public class ProductServiceConfiguration {
 	@Autowired
 	private PersistenceCommonService persistence;
 
 	@Bean
 	@Primary
-	public LocalContainerEntityManagerFactoryBean userEntityManager() {
+	public LocalContainerEntityManagerFactoryBean productEntityManager() {
 		LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
-		em.setDataSource(userDataSource());
-		em.setPackagesToScan(new String[] { PersistenceCommonService.KEY_USER_BASE_PACKAGE });
+		em.setDataSource(productDataSource());
+		em.setPackagesToScan(new String[] { PersistenceCommonService.KEY_PROD_BASE_PACKAGE });
 
 		HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 		em.setJpaVendorAdapter(vendorAdapter);
@@ -40,16 +40,16 @@ public class UserServiceConfiguration {
 
 	@Primary
 	@Bean
-	public DataSource userDataSource() {
-		return persistence.getDataSource("user");
+	public DataSource productDataSource() {
+		return persistence.getDataSource("product");
 	}
 
 	@Primary
 	@Bean
-	public PlatformTransactionManager userTransactionManager() {
+	public PlatformTransactionManager productTransactionManager() {
 
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
-		transactionManager.setEntityManagerFactory(userEntityManager().getObject());
+		transactionManager.setEntityManagerFactory(productEntityManager().getObject());
 		return transactionManager;
 	}
 }

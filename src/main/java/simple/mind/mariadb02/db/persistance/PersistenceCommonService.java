@@ -1,4 +1,4 @@
-package simple.mind.mariadb01.db.persistance;
+package simple.mind.mariadb02.db.persistance;
 
 import java.util.HashMap;
 import java.util.Map;
